@@ -9,7 +9,7 @@ angular.module('marvel', [])
     $scope.search = "Jessica";
 
     function fetch(){
-      $http.get("https://gateway.marvel.com:80/v1/public/characters?nameStartsWith=" + $scope.search + "&apikey=98ee8633afd874c9d8ab3a5f318bf166")
+      $http.get("https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=" + $scope.search + "&apikey=98ee8633afd874c9d8ab3a5f318bf166")
       .then(function(response){ $scope.details = response.data.results; });
     }
 
