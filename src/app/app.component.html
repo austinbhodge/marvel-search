@@ -1,0 +1,27 @@
+<div class="container outerdiv">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><b>Marvel</b> <span class="span-style">Hero Search</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="animated zoomInRight">
+    <div class="input-group search-bar">
+      <input type="text" class="form-control" placeholder="Enter Hero's Name" autofocus [(ngModel)]="search" [ngModelOptions]="{standalone: true}" (keypress)="loadHeros()" />
+      <span class="input-group-addon bar-style"><i class="glyphicon glyphicon-search"></i></span>
+    </div>
+    <div class="row">
+    <div *ngIf="loading">
+      Loading results...
+    </div>
+
+    <div *ngFor="let hero of heroList">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+        <div [style.backgroundImage]="'url(' + hero.thumbnail.path + '.' + hero.thumbnail.extension + ')'" class="thumbnail animated fadeIn hero"></div>
+        <h6 class="text-center"> {{hero.name}}</h6>
+      </div>
+    </div>
+    </div>
+  </div>

@@ -1,12 +1,3 @@
-body {
-  background: url(../images/bg-sky.png);
-  background-repeat: repeat !important;
-  background-attachment: fixed;
-}
-
-ul.rel-results {
-  list-style-type:circle;
-}
 
 .nojs {
   padding:2px;
