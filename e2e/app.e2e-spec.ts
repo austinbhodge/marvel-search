@@ -1,6 +1,6 @@
 import { NewMarvelPage } from './app.po';
 
-describe('new-marvel App', function() {
+describe('marvel-search App', function() {
   let page: NewMarvelPage;
 
   beforeEach(() => {
